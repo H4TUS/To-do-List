@@ -9,6 +9,7 @@ let oldTaskTitle;
 
 // Functions
 
+// Function to toggle input adn edit forms
 const toggleForms = () => {
   inputForm.classList.toggle('hide');
   taskList.classList.toggle('hide');
@@ -29,25 +30,43 @@ const updateTask = (text) => {
 
 // Events
 
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.location.pathname.endsWith('.html')) {
+    const cleanUrl = window.location.pathname.replace('.html', '');
+    window.history.replaceState(null, '', cleanUrl);
+  }
+});
+
+// Back to login page event
+document.addEventListener('click', (e) => {
+  const targerEl = e.target;
+
+  if (targerEl.classList.contains('fa-arrow-left')) {
+    window.location.href = './login.html';
+  }
+});
+
 // ADD TASK EVENT
 inputForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const inputValue = taskInput.value;
 
-  const response = await fetch('http://localhost:3000/add', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      description: inputValue,
-    }),
-  });
+  if (inputValue) {
+    const response = await fetch('http://localhost:3000/add', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        description: inputValue,
+      }),
+    });
 
-  const data = await response.json();
+    const data = await response.json();
 
-  taskList.appendChild(contructorTask(data));
+    taskList.appendChild(contructorTask(data));
+  }
 
   taskInput.value = '';
   taskInput.focus();
@@ -110,7 +129,7 @@ document.addEventListener('click', async (e) => {
   }
 });
 
-// OPEN EDIT TASK EVENT
+// OPEN EDIT FORM EVENT
 document.addEventListener('click', async (e) => {
   const targerEl = e.target;
   const parentEl = targerEl.closest('.task');

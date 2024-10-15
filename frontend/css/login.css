@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  background: rgb(255, 0, 249);
+  background: linear-gradient(
+    114deg,
+    rgba(255, 0, 249, 1) 0%,
+    rgba(0, 255, 166, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  min-width: 30vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+form {
+  width: 100%;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  width: auto;
+  margin: 20px 0 10px 0;
+}
+
+.description {
+  font-size: 17px;
+  color: #7b7b7b;
+  font-weight: 500;
+  width: auto;
+  margin: 0 0 10px 0;
+}
+
+p {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+}
+
+input {
+  font-size: 17px;
+  font-weight: 400;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #969696;
+  border-radius: 10px;
+  outline: none;
+  background-color: #e9e9e9;
+}
+
+button {
+  width: 100%;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #8b74d3;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #a797d6;
+    transition: 0.2s;
+  }
+}
+
+.container-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.forgot-password-btn {
+  width: auto;
+  color: #8b74d3;
+  padding: 0;
+  margin: 8px 0 30px 0;
+  background: none;
+  font-size: 15px;
+  transition: 0.2s;
+
+  &:hover {
+    color: #a18be4;
+  }
+
+  &:active {
+    background: none;
+  }
+}
+
+.line {
+  margin: 10px 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d3d3d3;
+}
+
+.container-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & button {
+    color: #8b74d3;
+    background: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  & .title {
+    text-align: center;
+    width: 100%;
+    margin-right: 8%;
+  }
+}
+
+.confirm-btn {
+  margin-top: 30px;
+}
+
+.hide {
+  display: none;
+}

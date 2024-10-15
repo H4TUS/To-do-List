@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/login.css" />
+    <!-- JS -->
+    <script src="./js/login.js" defer></script>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container" id="login-container">
+      <p class="title">Login</p>
+      <p class="description">Insira seus dados para continuar</p>
+      <form>
+        <div>
+          <p>Email</p>
+          <input
+            type="text"
+            placeholder="Escreva seu email"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <p>Senha</p>
+          <input
+            type="password"
+            placeholder="Escreva sua senha"
+            autocomplete="off"
+          />
+        </div>
+      </form>
+      <div class="container-buttons">
+        <button class="forgot-password-btn">Esqueceu a senha?</button>
+        <button>Login</button>
+        <div class="line"></div>
+        <button>Criar conta</button>
+      </div>
+    </div>
+
+    <div class="container hide" id="sing-in-container">
+      <div class="container-title">
+        <button>
+          <i class="fa-solid fa-arrow-left fa-lg"></i>
+        </button>
+
+        <p class="title">Cadastro</p>
+      </div>
+
+      <p class="description">Insira seus dados para se cadastrar</p>
+
+      <form>
+        <div>
+          <p>Nome</p>
+          <input
+            type="text"
+            placeholder="Escreva seu email"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <p>Email</p>
+          <input
+            type="text"
+            placeholder="Escreva seu email"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <p>Senha</p>
+          <input
+            type="password"
+            placeholder="Escreva sua senha"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <p>Confirmar senha</p>
+          <input
+            type="password"
+            placeholder="Escreva sua senha novamente"
+            autocomplete="off"
+          />
+        </div>
+      </form>
+      <button class="confirm-btn">Confirmar</button>
+    </div>
+  </body>
+</html>

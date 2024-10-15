@@ -1,3 +1,5 @@
+// É necessário rodar npm run start no terminal para se conectar ao banco de dados
+
 const express = require('express');
 const cors = require('cors');
 
