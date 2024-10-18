@@ -200,6 +200,7 @@ document
     ).value;
 
     e.target.querySelector('input[placeholder="Escreva seu email"]').value = '';
+
     requestPasswordReset(email);
   });
 
