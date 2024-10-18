@@ -18,31 +18,13 @@ Este aplicativo é uma lista de tarefas (To-Do List) que permite aos usuários a
 
 ### Passos para Configurar o Ambiente
 
-1. **Clonar o Repositório**
-
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
-   ```
-
-2. **Instalar Dependências**
+1. **Instalar Dependências**
 
    ```bash
    npm install
    ```
 
-3. **Configurar Variáveis de Ambiente**
-
-   Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
-
-   ```env
-   DB_USER=seu_usuario_mongodb
-   DB_PASS=sua_senha_mongodb
-   JWT_SECRET=sua_chave_secreta
-   ```
-
-4. **Iniciar o Servidor**
-
+2. **Iniciar o Servidor**
    ```bash
    npm run start
    ```
@@ -72,8 +54,7 @@ Este aplicativo é uma lista de tarefas (To-Do List) que permite aos usuários a
    ```
 
 2. **Abrir o Arquivo HTML no Navegador**
-
-   Abra o arquivo `index.html` ou `login.html` no navegador para interagir com o aplicativo.
+   - Abra o arquivo `login.html` no navegador para interagir com o aplicativo.
 
 ## Como Interagir com o Aplicativo
 
@@ -92,7 +73,6 @@ Este aplicativo é uma lista de tarefas (To-Do List) que permite aos usuários a
    - Clique em "Login".
 
 3. **Recuperação de Senha**
-
    - Acesse a página de login.
    - Clique em "Esqueceu a senha?".
    - Preencha o campo de email e clique em "Confirmar".
@@ -117,7 +97,6 @@ Este aplicativo é uma lista de tarefas (To-Do List) que permite aos usuários a
    - Clique no botão de conclusão ao lado da tarefa.
 
 4. **Excluir Tarefa**
-
    - Clique no ícone de exclusão ao lado da tarefa.
 
 ## Conclusão
