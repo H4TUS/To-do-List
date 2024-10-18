@@ -51,6 +51,11 @@ form {
   margin: 0 0 10px 0;
 }
 
+.recover-password {
+  margin: 10px 50px 0 50px;
+  text-align: center;
+}
+
 p {
   width: 100%;
   font-size: 17px;

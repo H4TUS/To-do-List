@@ -48,13 +48,13 @@
       </form>
       <div class="container-buttons">
         <button class="forgot-password-btn">Esqueceu a senha?</button>
-        <button>Login</button>
+        <button id="login-btn">Login</button>
         <div class="line"></div>
         <button>Criar conta</button>
       </div>
     </div>
 
-    <div class="container hide" id="sing-in-container">
+    <div class="container hide" id="sign-in-container">
       <div class="container-title">
         <button>
           <i class="fa-solid fa-arrow-left fa-lg"></i>
@@ -70,7 +70,7 @@
           <p>Nome</p>
           <input
             type="text"
-            placeholder="Escreva seu email"
+            placeholder="Escreva seu nome"
             autocomplete="off"
           />
         </div>
@@ -98,8 +98,70 @@
             autocomplete="off"
           />
         </div>
+        <button class="confirm-btn">Confirmar</button>
       </form>
-      <button class="confirm-btn">Confirmar</button>
+    </div>
+
+    <div class="container hide" id="request-email-container">
+      <div class="container-title">
+        <button>
+          <i class="fa-solid fa-arrow-left fa-lg"></i>
+        </button>
+
+        <p class="title">Recuperar senha</p>
+      </div>
+
+      <p class="description">Insira seu email para recuperar a senha</p>
+
+      <form>
+        <div>
+          <p>Email</p>
+          <input
+            type="text"
+            placeholder="Escreva seu email"
+            autocomplete="off"
+          />
+        </div>
+
+        <button class="confirm-btn">Confirmar</button>
+      </form>
+    </div>
+
+    <div class="container hide" id="change-password-container">
+      <p class="title">Recuperar senha</p>
+
+      <p class="description">Insira sua nova senha</p>
+
+      <form>
+        <div>
+          <p>Senha</p>
+          <input
+            type="password"
+            placeholder="Digite sua nova senha"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <p>Confirmar senha</p>
+          <input
+            type="password"
+            placeholder="Redigite sua nova senha"
+            autocomplete="off"
+          />
+        </div>
+
+        <button class="confirm-btn">Confirmar</button>
+      </form>
+    </div>
+
+    <div class="container hide" id="confirm-new-password-container">
+      <p class="title">Senha recuperada</p>
+
+      <p class="description recover-password">
+        Senha alterada com sucesso. Clique no botão abaixo para fazer o login
+      </p>
+
+      <button class="confirm-btn">Login</button>
     </div>
   </body>
 </html>

@@ -37,6 +37,32 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    window.location.href = './login.html';
+  } else {
+    fetch('http://localhost:3000/auth/validate-token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          localStorage.removeItem('token');
+          window.location.href = './login.html';
+        }
+      })
+      .catch((error) => {
+        console.error('Erro ao validar token:', error);
+        localStorage.removeItem('token');
+        window.location.href = './login.html';
+      });
+  }
+});
+
 // Back to login page event
 document.addEventListener('click', (e) => {
   const targerEl = e.target;
