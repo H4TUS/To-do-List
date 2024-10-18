@@ -69,6 +69,7 @@ document.addEventListener('click', (e) => {
 
   if (targerEl.classList.contains('fa-arrow-left')) {
     window.location.href = './login.html';
+    localStorage.removeItem('token');
   }
 });
 
