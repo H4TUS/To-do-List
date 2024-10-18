@@ -77,12 +77,14 @@ inputForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const inputValue = taskInput.value;
+  const token = localStorage.getItem('token');
 
   if (inputValue) {
     const response = await fetch('http://localhost:3000/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         description: inputValue,
@@ -91,7 +93,11 @@ inputForm.addEventListener('submit', async (e) => {
 
     const data = await response.json();
 
-    taskList.appendChild(contructorTask(data));
+    if (response.ok) {
+      taskList.appendChild(contructorTask(data));
+    } else {
+      console.error('Erro ao criar a tarefa:', data.message);
+    }
   }
 
   taskInput.value = '';
@@ -222,22 +228,30 @@ const tasks = [];
 
 // Function to all render tasks
 async function renderTasks() {
+  const token = localStorage.getItem('token');
+
   try {
     const response = await fetch('http://localhost:3000/get', {
       method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
+
     const data = await response.json();
-    console.log(data);
-    tasks.push(...data);
+    if (response.ok) {
+      tasks.push(...data);
+      taskList.innerHTML = '';
+      tasks.forEach((task) => {
+        taskList.appendChild(contructorTask(task));
+      });
+    } else {
+      console.log(token);
+      console.error('Erro ao buscar as tarefas:', data.message);
+    }
   } catch (error) {
     console.log(error);
   }
-
-  const taskList = document.getElementById('task-list');
-  taskList.innerHTML = '';
-  tasks.forEach((task) => {
-    taskList.appendChild(contructorTask(task));
-  });
 }
 
 function contructorTask(task) {
